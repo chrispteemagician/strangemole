@@ -1,0 +1,74 @@
+{
+  "name": "Strange Mole Hamlet",
+  "short_name": "StrangeMole",
+  "description": "Anti-Fascist Comedy Podcast & Political Activism Hub - Part of the FeelFamous Village",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1a2f0f",
+  "theme_color": "#2d5016",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["entertainment", "news", "education"],
+  "lang": "en-GB",
+  "dir": "ltr",
+  "prefer_related_applications": false,
+  "scope": "/",
+  "screenshots": [
+    {
+      "src": "/screenshots/desktop-home.png",
+      "sizes": "1920x1080",
+      "type": "image/png",
+      "form_factor": "wide"
+    },
+    {
+      "src": "/screenshots/mobile-home.png",
+      "sizes": "750x1334",
+      "type": "image/png"
+    }
+  ],
+  "share_target": {
+    "action": "/",
+    "method": "GET",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url"
+    }
+  },
+  "shortcuts": [
+    {
+      "name": "Comedy Room",
+      "short_name": "Podcast",
+      "description": "Strange Mole Show podcast",
+      "url": "/comedy-room.html",
+      "icons": [{ "src": "/icons/comedy.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "Support",
+      "short_name": "Donate",
+      "description": "Support the show",
+      "url": "/support.html",
+      "icons": [{ "src": "/icons/coffee.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "Receipts",
+      "short_name": "Receipts",
+      "description": "We were right about everything",
+      "url": "/receipts.html",
+      "icons": [{ "src": "/icons/receipts.png", "sizes": "96x96" }]
+    }
+  ]
+}

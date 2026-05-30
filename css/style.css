@@ -1,0 +1,369 @@
+/* Strange Mole Hamlet - Psychedelic Forest Rave + Garage Punk */
+
+:root {
+    /* Core Colors - Forest Rave Palette */
+    --forest-dark: #1a2f0f;
+    --forest-deep: #2d5016;
+    --forest-mid: #4a7c2e;
+    --forest-light: #6ea649;
+    
+    /* Electric Accents */
+    --electric-purple: #b042ff;
+    --electric-magenta: #ff00ff;
+    --electric-yellow: #ffff00;
+    --electric-cyan: #00ffff;
+    
+    /* Wood Tones */
+    --wood-dark: #3d2817;
+    --wood-mid: #6b4423;
+    --wood-light: #a67c52;
+    
+    /* High Contrast */
+    --pure-white: #ffffff;
+    --pure-black: #000000;
+    --off-white: #f5f5f5;
+    --charcoal: #1a1a1a;
+    
+    /* Functional */
+    --safe-portal: #ff6b35;
+    --danger: #ff3333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background: linear-gradient(135deg, var(--forest-dark) 0%, var(--forest-deep) 50%, var(--wood-dark) 100%);
+    color: var(--off-white);
+    line-height: 1.6;
+    min-height: 100vh;
+    padding: 1rem;
+}
+
+/* Hand-crafted header feel */
+.hamlet-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 2rem 1rem;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+    border: 3px solid var(--forest-light);
+    box-shadow: 0 0 30px rgba(110, 166, 73, 0.3);
+}
+
+.hamlet-title {
+    font-size: clamp(2rem, 8vw, 3.5rem);
+    font-weight: 900;
+    color: var(--electric-cyan);
+    text-shadow: 
+        0 0 10px var(--electric-cyan),
+        0 0 20px var(--forest-light),
+        3px 3px 0 var(--forest-dark);
+    margin-bottom: 0.5rem;
+    letter-spacing: 2px;
+}
+
+.hamlet-tagline {
+    font-size: clamp(0.9rem, 3vw, 1.1rem);
+    color: var(--electric-yellow);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.ecosystem-badge {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    background: linear-gradient(135deg, var(--electric-purple), var(--electric-magenta));
+    color: var(--pure-white);
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    box-shadow: 0 4px 15px rgba(176, 66, 255, 0.4);
+}
+
+/* Village Square Navigation */
+.village-square {
+    margin: 3rem auto;
+    max-width: 1200px;
+}
+
+.square-title {
+    font-size: clamp(1.8rem, 6vw, 2.5rem);
+    color: var(--forest-light);
+    text-align: center;
+    margin-bottom: 0.5rem;
+    font-weight: 800;
+}
+
+.square-subtitle {
+    text-align: center;
+    color: var(--wood-light);
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.room-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem 0;
+}
+
+/* Room Cards - Big Visual Buttons */
+.room-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 1.5rem;
+    background: rgba(0, 0, 0, 0.6);
+    border: 3px solid var(--forest-mid);
+    border-radius: 20px;
+    text-decoration: none;
+    color: var(--off-white);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    min-height: 200px;
+}
+
+.room-card:hover,
+.room-card:focus {
+    transform: translateY(-5px);
+    border-color: var(--electric-cyan);
+    box-shadow: 
+        0 0 30px rgba(0, 255, 255, 0.4),
+        0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.room-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
+}
+
+.room-card h3 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+    color: var(--pure-white);
+}
+
+.room-card p {
+    font-size: 1rem;
+    color: var(--wood-light);
+}
+
+/* Individual Room Colors */
+.room-card.comedy { border-color: var(--electric-magenta); }
+.room-card.comedy:hover { border-color: var(--electric-magenta); box-shadow: 0 0 30px rgba(255, 0, 255, 0.4); }
+
+.room-card.art { border-color: var(--wood-light); }
+.room-card.art:hover { border-color: var(--wood-light); box-shadow: 0 0 30px rgba(166, 124, 82, 0.4); }
+
+.room-card.events { border-color: var(--electric-yellow); }
+.room-card.events:hover { border-color: var(--electric-yellow); box-shadow: 0 0 30px rgba(255, 255, 0, 0.4); }
+
+.room-card.community { border-color: var(--electric-purple); }
+.room-card.community:hover { border-color: var(--electric-purple); box-shadow: 0 0 30px rgba(176, 66, 255, 0.4); }
+
+.room-card.support { border-color: var(--forest-light); }
+.room-card.support:hover { border-color: var(--forest-light); box-shadow: 0 0 30px rgba(110, 166, 73, 0.4); }
+
+.room-card.receipts { border-color: var(--safe-portal); }
+.room-card.receipts:hover { border-color: var(--safe-portal); box-shadow: 0 0 30px rgba(255, 107, 53, 0.4); }
+
+/* About Section */
+.about-hamlet {
+    max-width: 800px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    border: 2px solid var(--forest-mid);
+}
+
+.about-hamlet h2 {
+    color: var(--electric-cyan);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.about-hamlet p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.manifesto {
+    font-weight: 700;
+    color: var(--electric-yellow);
+    padding: 1rem;
+    background: rgba(255, 255, 0, 0.1);
+    border-left: 4px solid var(--electric-yellow);
+}
+
+.tagline {
+    font-style: italic;
+    color: var(--wood-light);
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+/* Footer */
+.hamlet-footer {
+    text-align: center;
+    margin-top: 4rem;
+    padding: 2rem 1rem;
+    border-top: 2px solid var(--forest-mid);
+    color: var(--wood-light);
+}
+
+.hamlet-footer p {
+    margin: 0.5rem 0;
+}
+
+.offline-ready {
+    color: var(--electric-cyan);
+    font-weight: 700;
+}
+
+/* Safe Portal Modal */
+.safe-portal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.9);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    padding: 1rem;
+}
+
+.safe-portal-overlay.active {
+    display: flex;
+}
+
+.safe-portal-content {
+    background: linear-gradient(135deg, var(--forest-dark), var(--wood-dark));
+    border: 3px solid var(--safe-portal);
+    border-radius: 20px;
+    padding: 2rem;
+    max-width: 500px;
+    text-align: center;
+    box-shadow: 0 0 50px rgba(255, 107, 53, 0.5);
+}
+
+.safe-portal-content h2 {
+    color: var(--safe-portal);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.portal-icon {
+    font-size: 4rem;
+    margin: 1rem 0;
+}
+
+.safe-portal-content p {
+    margin: 1rem 0;
+    font-size: 1.1rem;
+}
+
+.portal-destination {
+    color: var(--electric-cyan);
+    font-weight: 700;
+    word-break: break-all;
+}
+
+.portal-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.portal-btn {
+    flex: 1;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.portal-btn.continue {
+    background: var(--safe-portal);
+    color: var(--pure-white);
+}
+
+.portal-btn.continue:hover {
+    background: #ff8555;
+    transform: translateY(-2px);
+}
+
+.portal-btn.back {
+    background: var(--forest-mid);
+    color: var(--pure-white);
+}
+
+.portal-btn.back:hover {
+    background: var(--forest-light);
+    transform: translateY(-2px);
+}
+
+/* Accessibility - High Contrast Mode */
+@media (prefers-contrast: high) {
+    :root {
+        --forest-dark: #000000;
+        --off-white: #ffffff;
+    }
+    
+    .room-card {
+        border-width: 4px;
+    }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+    .room-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .hamlet-header {
+        padding: 1.5rem 1rem;
+    }
+    
+    .room-card {
+        padding: 1.5rem 1rem;
+    }
+}
+
+/* Print Styles */
+@media print {
+    body {
+        background: white;
+        color: black;
+    }
+    
+    .hamlet-header,
+    .room-card {
+        border: 2px solid black;
+        page-break-inside: avoid;
+    }
+}
